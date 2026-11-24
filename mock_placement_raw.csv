@@ -1,0 +1,213 @@
+Student ID,branch,CGPA ,active_backlogs,aptitude_score,gate_appeared,GATE Score,gate_rank,gate_qualified,primary_language,web_framework,database,cloud_platform,ai_coding_tool,num_projects,ai_ml_projects,internships,certifications,dsa_problems_solved,leetcode_rating,communication_score,active_github,placed,company_type,role,Package (LPA)
+STU0001,CSE,6.52,0,53.0,N,,,No,python,Spring Boot,PostgreSQL,None,ChatGPT,2,1,1,0,30,0,6.0,No,No,,,
+STU0002,ECE,7.77,0,47.0,Yes,39.66,1444,Yes,C++,None,PostgreSQL,AWS,GitHub Copilot,2,0,1,3,53,1260,5.9,Yes,No,,,
+STU0003,CSE,6.1,0,61.1,Yes,7.4,17855,No,TypeScript,React,PostgreSQL,None,GitHub Copilot,2,0,0,0,177,0,8.7,No,No,,,
+STU0004,ECE,6.62,0,60.9,Yes,24.75,6115,No,Java,Spring Boot,mongodb,AWS,Cursor,0,0,1,0,104,1248,6.5,No,No,,,
+STU0034,CSE,8.49,0,63.1,YES,45.36,596,Yes,Java,React.js,None,None,ChatGPT,1,1,3,3,null,1673,8.6,No,Yes,PSU,Management Trainee (Technical),18.04
+STU0105,ECE,8.0/10,0,56.5,No,,,No,Javascript,None,MongoDB,AWS,None,0,0,0,0,142,1549,3.9,Yes,No,,,
+STU0005,IT,5.92,0,46.7,No,,,No,TypeScript,Django,PostgreSQL,None,Claude Code,1,0,1,1,33,1448,10,NO,Yes,Startup,Frontend Engineer,8.91
+STU0006,CSE,7.94,2,64.8,No,,,No,C++,Spring Boot,MySQL,AWS,Claude Code,4,0,2,1,159,,8.7,Yes,Yes,Service,Associate Engineer,3.4
+STU0007,CE,8.36,0,63.6,No,,,No,TypeScript,Django,None,AWS,GitHub Copilot,5,0,0,0,72,1390,6.9,Yes,Yes, Service,Systems Engineer,-4.5
+  STU0008,ME,6.59,1,33.3,no,,,No,JavaScript,React,MongoDB,Azure,GitHub Copilot,2,0,1,0,73,1278,4.4,Yes,Yes,Service,Associate Engineer,3.04
+STU0009,AI&DS,5.5,0,54.3,No,,,No,Java,Spring Boot,PostgreSQL,AWS,Github Copilot,6,1,2,1,285,1719,5.2,Y,No,,,
+  STU0010,Cse,6.06,0,39.0,y,13.85,12734,No,JavaScript,Node.js,MongoDB,None,ChatGPT,5,0,0,1,79,-,5.7,Yes,Yes,Product,Backend Engineer,18.32
+STU0011,CSE,6.99,0,46.0,Yes,25.39,5135,Yes,JavaScript,Node.js,MySQL,None,GitHub Copilot,2,0,0,1,244,1619,-,Yes,No,,,
+STU0012,ME,6.68,0,51.9,No,,,No,JavaScript,None,PostgreSQL,AWS,GitHub Copilot,1,1,2,2,0,0,7.8,No,N,,,
+STU0013,CSE,7.35,0,65.8,No,,,No,Python,Next.js,PostgreSQL,none,ChatGPT,2,0,0,1,126,1430,7.1,Yes,Yes,Service,Associate Engineer,4.2
+STU0014,AI&DS,6.79,0,56.6,No,,,No,JavaScript,Node.js,PostgreSQL,None,Cursor,3,1,1,1,null,1553,7.3,No,No,,,
+STU0015,AI&DS,7.83,0,67.8,Yes,38.12,1527,Yes,JavaScript,React,SQLite,google cloud,GitHub Copilot,-,2,NA,0,174,1322,3.5,No,No,,,
+STU0016,AI&DS,6.93,0,57.8,N,,,No,Java,Spring Boot,PostgreSQL,Azure,Claude Code,5,1,1,0,215,1490,7.6,Yes,Yes,,ML Engineer,6.17
+STU0017,CE,7.02,0,32.4,No,,,No,C++,None,MySQL,Azure,Claude Code,2,2,1,0,140,1732,5.8,Yes,No,,,7.63
+STU0018,ECE,8.38,0,45.1,No,,,No,C++,Node.js,MongoDB,AWS,GitHub Copilot,0,0,0,2,97,1356,5.8,No,No,,,
+STU0019,CSE,8.65,0,99.9,No,43,,No,C++,React,MySQL,AWS,Claude Code,1,1,1,0,75,1561,-3,No,No,,,
+STU0020,CSE,7.31,0,80.9,No,,,No,Java,Spring Boot,Mongo,Azure,GitHub Copilot,4,1,2,2,221,1384,4.8,Yes,Yes,Service,Associate Engineer,4.93
+STU0021,cse,8.13,1,81.9,No,,,No,Python,None,PostgreSQL,AWS,GitHub Copilot,5,0,1,2,190,-,5.3,No,1,Product,Backend Engineer,8.22
+STU0022,ECE,8.45,2,48.3,Yes,150,1399,Yes,JavaScript,React,PostgreSQL,Google Cloud,Cursor,4,6,1,0,0,0,6.6,No,No,,,
+STU0023,IT,6.04,0,85.0,Yes,5,21935,No,JavaScript,None,MySQL,None,NA,4,2,1,0,85,1464,NA,Yes,No,,,
+STU0024,I.T.,7.26,0,55.1,No,,,No,Java,Node.js,PostgreSQL,AWS,GitHub Copilot,5,1,0,2,95,1600,6.8,Yes,No,,,
+ STU0025 ,ECE,6.9/10,2,50.4,No,,,No,Go,Spring Boot,SQLite,None,ChatGPT,2,0,0,0,88,1583,4.0,No,0,,,
+STU0026,ME,7.33,0,67.8,No,,,N,Python,NodeJS,SQLite,AWS,GitHub Copilot,3,0,1,3,0,0,8.1,Yes,Yes,Product,Full Stack Developer,20.98
+STU0027,ECE,8.18,2,74.7,No,,,No,C++,React,None,Google Cloud,Claude Code,5,1,2,2,200,1483,4.7,No,Yes,Service,  Systems Engineer,6.12
+STU0028,Cse,6.96,0,69.3,Yes,22.02,7971,No,Python,Spring Boot,MongoDB,None,GitHub Copilot,3,1,2,1,230,1677,3.9,Yes,Yes,,Systems Engineer,3.41
+STU0029,ECE,5.5,2,55.2,No,,,No,JS,React,Redis,None,Claude Code,6,1,1,0,140,?,8.4,Yes,No,,,
+STU0050,CSE,7.25,0,70.1,Yes,16.92,7661,No,py,django,PostgreSQL,None,Claude Code,3,1,2,0,123,1361,6.9,Yes,Yes,Product,Full Stack Developer,11.26
+STU0030,  ME,7.78,0,55.2,Yes,18.1,10270,No,Java,ASP.NET Core,SQLite,Azure,Claude Code,3,2,1,1,61,1304,8.5,Yes,Yes,Service,Associate Engineer,5.01
+STU0031,CSE,69.0%,0,92.1,No,,,No,Java,React,MongoDB,None,None,-2,0,0,0,137,1578,7.1,No,No,,,
+STU0004,ece,6.62,0,60.9,Yes,24.75,6115,No,JAVA,Spring Boot,mongodb,AWS,Cursor,0,0,1,0,104,1248,6.5,No,No,,,
+STU0032,ECE,8.1/10,0,70.9,Yes,30.16,3505,Yes,Python,Next.js,PostgreSQL,AWS,GitHub Copilot,7,0,0,0,104,1251,6.8,Yes,Yes,Startup,Frontend Engineer,9.45 lpa
+STU0033,CSE,8.69,0,76.5,Yes,42.08,1395,Yes,Python,spring boot,PostgreSQL,None,Claude Code,3,1,?,1,212,1557,7.0,No,Yes,PSU,  Engineer Trainee ,9.83
+STU0034,CSE,8.49,0,63.1,YES,45.36,596,Yes,Java,React.js,None,None,ChatGPT,1,1,3,3,null,1673,8.6,No,Yes,PSU,Management Trainee (Technical),18.04
+STU0035,IT,null,0,53.8,Yes,29.25,2515,y,Java,Spring Boot,MySQL,AWS,ChatGPT,NA,1,0,0,154,1480,5.7,Yes,Yes,Startup,Full Stack Developer,8.27
+STU0036,CE,6.61,0,83.9,Yes,22.08,7507,No,C++,None,MongoDB,AWS,ChatGPT,7,2,1,2,154,1598,4.6,Yes,No,,,
+STU0037,ECE,55.0%,0,45.9,No,,,No,Python,Django,None,AWS,GitHub Copilot,6,0,0,4,0,0,8.1,Yes,Yes,Core/Other,Graduate Engineer Trainee,2.5
+STU0038,CSE,"7,86",0,60.6,Yes,28.6,2912,Yes,JavaScript,React,SQLite,Azure,Claude Code,2,1,2,2,213,1680,5.5,No,No,,,
+STU0039,ECE,7.45,0,44.8,YES,24.29,5443,No,C++,Spring Boot,MySQL,AWS,GITHUB COPILOT,1,0,0,1,43,1628,8.3,n,Yes,Product,Backend Engineer,15.91
+STU0040,ECE,9.47,1,50.5,No,,,No,JavaScript,Next.js,MongoDB,Azure,ChatGPT,1,1,1,3,24,0,9.2,No,No,,,
+STU0041, IT ,9.1,0,75.6,No,,,No,Java,Spring Boot,Redis,aws,None,3,0,1,3,137,1552,7.3,Yes,Yes,Service,Associate Engineer,5.29
+STU0042,CSE,6.8,0,68.1,Yes,5,21147,No,C++,React,MySQL,AWS,Claude Code,5,2,1,1,83,1487,4.7,No,1,Product,Backend Engineer,7.97
+STU0043,CSE,7.97,0,60.7,Yes,27.47,4702,Y,Java,None,MySQL,Google Cloud,Github Copilot,2,0,1,2,272,1448,6.5,Yes,yes,Startup,Frontend Engineer,10.34
+STU0028,cse,6.96,0,69.3,Yes,22.02,7971,No,PYTHON,Spring Boot,MongoDB,None,GitHub Copilot,3,1,2,1,230,1677,3.9,Yes,Yes,,Systems Engineer,3.41
+STU0044,AI&DS,7.22,0,58.2,No,,,No,PYTHON,ASP.NET Core,mysql,None,GitHub Copilot,8,1,0,2,101,NA,4.7,Yes,No,,,
+STU0045,CSE,86.0%,2,75.9,No,,,n,JavaScript,ReactJS,SQLite,AWS,GitHub Copilot,5,1,0,0,64,1471,5.2,No,No,,,
+STU0046,ECE,null,0,57.8,No,,,No,JavaScript,Node.js,PostgreSQL,AWS,Claude Code,0,0,2,2,195,1486,8.0,Yes,Yes,Startup,Frontend Engineer,5.78
+STU0047, CSE,7.04,0,52.5,N,,,No,Python,React,MySQL,None,None,3,0,1,1,169,1898,5.6,Yes,No,,,
+STU0048,CSE,9.74,0,49.1,Yes,19.16,7363,No,Java,React,None,Google Cloud,Claude Code,99,2,1,2,0,0,7.8,Yes,Yes,Service,Analyst,4.53
+  STU0049,ECE,8.14,0,55.9,No,,,No,C++,React,MySQL,aws,None,0,0,0,0,103,1516,5.3,No,No,,,
+STU0169,CE,7.17,0,64.5,No,,,No,py,Node.js,MongoDB,Azure,GitHub Copilot,0,0,0,0,103,1491,6.8,No,No,,,
+STU0050,CSE,7.25,0,70.1,Yes,16.92,7661,No,py,django,PostgreSQL,None,Claude Code,3,1,2,0,123,1361,6.9,Yes,Yes,Product,Full Stack Developer,11.26
+STU0051,CSE,6.89,0,83.2,No,,,No,Go,Node.js,None,None,GitHub Copilot,7,0,0,1,NA,1992,4.2,Yes,Yes,Service,Systems Engineer,6.02
+STU0052,ME,?,0,NA,N,,,N,c++,None,MySQL,AWS,ChatGPT,null,2,0,0,250,1570,6.1,No,Yes,Service,Analyst,4.15
+STU0170,CSE,9.38,3,80.4,Yes,48.36,588,Yes,Java,Node.js,PostgreSQL,Azure,None,4,0,0,0,153,1602,6.6,n,No,,,
+STU0053,ECE,7.67,0,74.5,Yes,43.33,1135,Yes,Java,React,MongoDB,AWS,GitHub Copilot,6,1,2,0,0,0,7.0,Yes,Yes,PSU,Engineer Trainee,12.87
+STU0054,CSE,0,0,53.5,Yes,44.02,873,YES,Java,Spring Boot,MySQL,None,ChatGPT,0,0,1,2,156,1562,5.3,No,Yes,PSU,Management Trainee (Technical),1507000
+STU0055,CSE,7.02,0,72.0,No,,,No,C++,Node.js,MySQL,AWS,GitHub Copilot,0,0,1,0,206,1489,5.9,No,Yes,Product,SDE,25.84
+STU0056, CSE,8.37,2,N/A,Yes,52.83,390,Yes,Java,Node.js,PostgreSQL,AWS,Claude Code,2,0,1,0,?,1660,9.1,No,Yes,Startup,Frontend Engineer,6.8
+STU0057,ECE,7.87,0,61.2,Yes,33.11,3036,Yes,Python,Django,PostgreSQL,AWS,None,1,1,0,1,249,1672,7.8,No,Yes,  Product,Full Stack Developer,16.42
+STU0058,C.S.E,7.79,0,71.5,Yes,38.6,1087,Yes,Python,Node.js,PostgreSQL,Azure,ChatGPT,3,3,0,0,37,1388,7.7,Yes,No,,,
+STU0059, CSE,?,0,61.0,No,,,No,JavaScript,None,SQLite,MS Azure,GitHub Copilot,5,0,0,0,312,1745,7.1,Y,No,,,
+STU0060,IT,7.88,1,57.3,No,,,No,Javascript,React,MongoDB,AWS,Chat GPT,0,0,2,0,-40,1561,6.8,No,Yes,Startup,ML Engineer,5.13
+STU0061,CE,6.44,0,62.2,Yes,33.8,1944,Yes,Java,Spring Boot,MySQL,None,Claude Code,3,0,1,2,0,0,6.0,No,N,,,
+STU0062,CE,7.05,0,55.0,Yes,999,1154,Yes,Python,None,postgresql,None,ChatGPT,4,3,2,0,72,1308,3.4,No,No,,,
+STU0063,IT,8.9,0,72.4,Yes,34.22,2509,Yes,C++,Spring Boot,PostgreSQL,AWS,None,4,0,1,2,90,1137,5.3,Yes,Yes,Startup,Frontend Engineer,5.74
+STU0064,I.T.,?,0,60.9,Yes,23.36,6357,NO,Java,Spring Boot,SQLite,None,GitHub Copilot,2,0,2,1,210,1568,6.9,No,No,,,
+STU0065,ECE,8.49,1,62.0,No,,,No,Python,Django,PostgreSQL,AWS,GitHub Copilot,5,0,0,2,109,1436,6.4,Yes,no,,,
+STU0066,IT,8.05,0,72.9,TRUE,18.69,7439,no,Python,Spring Boot,MySQL,AWS,GitHub Copilot,0,0,1,2,9999,1781,6.0,No,Yes,Service,Associate Engineer,788000
+STU0067,CSE,7.63,1,57.8,Yes,27.6,4845,Yes,JS,React,MySQL,Azure,GitHub Copilot,3,0,1,2,271,1681,6.4,No,No,,,
+STU0068,AI&DS,7.03,0,68.7,Yes,38.1,1246,Yes,Python,django,None,Azure,GitHub Copilot,3,1,2,0,75,1516,8.0,Yes,No,,,
+STU0069,AI&DS,6.86,0,49.4,No,,,No,JavaScript,Node.js,PostgreSQL,AWS,None,3,1,1,1,260,1736,null,Yes,Yes,Service,Analyst,4.32
+STU0070,IT,8.2,0,59.2,No,,,No,Python,Node.js,PostgreSQL,AWS,ChatGPT,2,1,0,1,189,1698,6.1,TRUE,No,,,
+STU0071,AI&DS,6.56,0,53.8,No,,,No,Java,Spring Boot,PostgreSQL,Azure,GitHub Copilot,3,1,1,3,158,1331,5.7,Yes,Yes,Core/Other,Test Engineer,3.31
+STU0072,CSE,9.16,0,78.5,No,23,,No,Java,React,MySQL,Azure,Claude Code,3,0,0,3,166,1326,4.7,No,Yes,Service,Associate Engineer,8.46
+STU0073,CSE,7.57,1,69.2,Yes,18.65,9622,No,Java,Spring Boot,MySQL,AWS,GitHub Copilot,3,0,1,0,195,1541,7.7,No,No,Product,,
+STU0074,IT,8.16,0,64.2,Yes,52.33,486,Yes,JavaScript,React,MySQL,AWS,Claude Code,5,0,1,1,217,9999,7.4,FALSE,No,,,
+STU0075,IT,7.45,0,67.2,No,,,No,JavaScript,Spring Boot,MySQL,aws,GitHub Copilot,3,1,0,1,258,1536,6.8,No,No,,,
+STU0076,eee,84.5%,0,60.4,Yes,35.95,1553,Yes,c++,None,PostgreSQL,None,GitHub Copilot,7,0,1,0,82,1388,6.0,Yes,Yes,Service,Associate Engineer,5.0
+STU0077,CSE,7.13,0,45.1,TRUE,15.52,7903,No,Java,None,MongoDB,None,Cursor,0,0,0,0,276,1965,3.1,No,No,,,
+STU0078,IT,6.12,1,41.3,No,,,No,Python,React,MongoDB,AWS,ChatGPT,6,1,2,3,81,1387,7.5,Yes,Yes,Product,Backend Engineer,12.05
+STU0079,CSE,6.95,0,50.2,Yes,21.34,5995,No,JavaScript,Spring Boot,SQLite,AWS,ChatGPT,1,1,0,0,134,1425,8.0,Yes,No,,,
+STU0109,CSE,7.82,0,63.6,No,,,No,Python,React,MySQL,None,Claude Code,3,0,1,1,389,1831,8.0,Yes,Yes,Product,  Full Stack Developer ,20.08
+STU0080,Mechanical,7.59,0,72.7,No,,,No,PYTHON,None,PostgreSQL,None,Cursor,2,0,0,1,8,0,5.5,No,No,,,11.97
+STU0081,Information Technology,8.16,0,49.9,No,,,No,JavaScript,None,None,AWS,Claude Code,4,0,0,2,277,1507,null,Yes,no,,,
+STU0082,CSE,85,1,54.9,Yes,28.24,4126,Yes,C++,Spring Boot,MongoDB,AWS,None,0,0,1,0,237,1676,6.3,FALSE,No,,,
+STU0083,CSE,6.53,3,58.3,Yes,8.95,21650,No,Java,Spring Boot,MySQL,AWS,GitHub Copilot,6,3,2,0,238,1557,4.9,Yes,No,,,
+STU0084,IT,8.53,0,43.8,Yes,10.23,19035,No,Java,Node.js,MySQL,Google Cloud,None,5,1,1,3,121,1724,7.9,Y,Yes, Service,Analyst,4.56
+STU0085,ECE,6.94,0,76.7,Yes,24.79,5834,No,Java,ReactJS,postgresql,AWS,Cursor,?,0,0,3,108,1622,7.2,Yes,No,,,
+STU0086,CSE,7.22,1,47.5,No,,,No,C++,Node.js,None,None,ChatGPT,4,0,0,4,275,1685,7.8,YES,Yes,Product,Backend Engineer,₹22.22L
+STU0087,EEE,7.31,0,250,No,,,No,C++,None,PostgreSQL,AWS,ChatGPT,3,1,3,1,0,0,5.9,Yes,Yes,Product,Full Stack Developer,19.47
+STU0088,CSE,6.94,1,64.8,No,,,No,Python,ASP.NET Core,MySQL,Amazon Web Services,Claude Code,3,2,0,3,259,1796,4.0,No,No,,,
+STU0089, AI&DS,7.96,0,67.5,No,,,No,JAVA,Node.js,SQLite,None,Claude Code,6,2,0,2,148,1559,7.2,Yes,Yes,Startup,Full Stack Developer,5.91
+STU0090,AI&DS,6.82,1,64.8,No,,,No,C++,None,PostgreSQL,AWS,None,4,1,0,2,0,0,8.8,Yes,No,,,
+STU0091,CSE,8.42,0,58.2,No,,,No,Python,React,SQLite,AWS,claude code,3,0,?,2,255,1649,6.2,Yes,Yes,Startup,Frontend Engineer,9.19
+STU0092,ECE,8.77,0,85.3,Yes,51.65,425,Yes,C++,React,MongoDB,AWS,Cursor,4,0,1,3,NA,1295,8.4,Yes,Yes, PSU,Management Trainee (Technical),20.87
+STU0093,ECE,8.7,0,59.6,No,,,No,C++,Spring Boot,MySQL,Google Cloud,Claude Code,57,0,0,0,72,1350,4.1,Yes,Yes,Product,Backend Engineer,13.12
+STU0094,  IT,7.55,0,55.9,Yes,-12,572,Yes,JavaScript,None,SQLite,Google Cloud,Cursor,4,0,0,0,79,1505,5.6,No,No,Service,,
+STU0095,Ece,7.93,0,67.3,No,,,No,Java,Spring Boot,PostgreSQL,None,GitHub Copilot,5,0,1,0,87,1458,6.9,Yes,Yes,Service,Associate Engineer,5.34
+STU0096,C.S.E,7.48,0,,No,,,No,Java,Spring Boot,PostgreSQL,None,Claude Code,1,1,1,1,96,1381,6.4,No,FALSE,,,
+STU0097,CE,7.37,0,142,Yes,5,25432,No,C++,None,None,None,Claude Code,6,1,0,1,66,1207,4.8,YES,FALSE,,,
+STU0098,CSE,N/A,0,81.7,Yes,56.98,365,Yes,JavaScript,Node.js,MongoDB,AWS,copilot,5,1,0,2,117,1521,6.3,Yes,Yes, PSU ,Management Trainee (Technical),13.0
+STU0099,ce,7.06,0,46.5,Yes,31.71,2705,Yes,Python,None,MySQL,Azure,Cursor,4,0,0,2,5,0,5.0,Yes,No,,,
+STU0100, CSE ,8.17,0,?,No,,,No,Java,Node.js,PostgreSQL,AWS,Claude Code,0,0,0,0,181,1275,8.1,Yes,Yes,Product,SDE,16.4
+STU0101,ECE,8.0,0,81.2,No,,,No,Python,Django,PostgreSQL,None,ChatGPT,5,0,2,0,171,1442,6.2,Yes,Yes,Startup,Frontend Engineer,14.33
+STU0102,ECE,9.18,0,65.8,TRUE,39.83,976,Yes,Python,NodeJS,MongoDB,Google Cloud,Claude Code,5,2,1,2,53,1500,4.8,Yes,Yes,Service,Systems Engineer,4.52
+STU0103,Computer Science,9.75,0,-5,No,,,No,java,springboot,PostgreSQL,Azure,GitHub Copilot,2,0,1,1,369,1748,4.0,No,Yes,Service,Analyst,5.89
+STU0104,CSE,,0,51.0,No,,,No,JavaScript,React,MySQL,Google Cloud,Cursor,N/A,1,1,1,142,1291,,Yes,No,,,
+STU0105,ECE,8.0/10,0,56.5,No,,,No,Javascript,None,MongoDB,AWS,None,0,0,0,0,142,1549,3.9,Yes,No,,,
+STU0106,IT,7.25,0,69.1,No,,,No,Go,None,MySQL,AWS,ChatGPT,7,1,2,0,94,1625,6.4,Yes,Yes,Startup,Frontend Engineer,10.79
+STU0107,Cse,7.19,0,67.1,No,,,No,py,Django,PostgreSQL,aws,None,1,0,0,1,157,1566,9.9,No,Yes,Startup,ML Engineer,7.78
+STU0108,Mech,5.95,0,-,Yes,9.5,12596,No,C++,None,MySQL,None,GitHub Copilot,4,0,0,3,118,,6.6,Yes,No,,,
+STU0109,CSE,7.82,0,63.6,No,,,No,Python,React,MySQL,None,Claude Code,3,0,1,1,389,1831,8.0,Yes,Yes,Product,  Full Stack Developer ,20.08
+STU0110,EEE,7.55,2,67.5,No,,,No,Python,None,MongoDB,None,Cursor,0,0,2,0,0,0,5.6,Yes,No,,,
+STU0111,CSE,8.26,0,44.1,1,19.82,6054,No,Python,Django,PostgreSQL,Azure,GitHub Copilot,5,0,2,3,202,1379,4.9,No,Yes,Service,Associate Engineer,3.75
+STU0112,CE,7.9,1,67.7,Yes,49.13,527,Y,Java,Next.js,PostgreSQL,AWS,Claude Code,3,0,1,4,90,1660,7.4,Yes,Yes,PSU,Management Trainee (Technical),10.17
+STU0113,I.T.,6.66,0,53.0,Yes,5.95,25254,No,C++,Spring Boot,MySQL,none,None,4,0,3,0,54,1368,4.4,No,Yes,Core/Other,Test Engineer,3.2
+STU0114,AIDS,7.68,0,67.8,Yes,29.55,3166,Yes,Java,Spring Boot,Redis,AWS,ChatGPT,2,2,0,0,252,1703,8.6,Yes,yes,Service,Systems Engineer,2.72
+STU0115,CSE,6.78,0,51.1,Yes,5,19839,No,Java,spring boot,MongoDB,AWS,Claude Code,1,0,3,0,321,1576,5.6,No,Yes,Product,Backend Engineer,TBD
+STU0116,CSE,7.13,0,92.5,Yes,32.88,2637,Yes,C++,React,SQLite,AWS,GitHub Copilot,0,0,0,0,151,1547,7.8,Yes,Yes,Service,Systems Engineer,3.56
+STU0117,ME,6.93,0,59.4,No,,,No,Python,React,MySQL,None,Cursor,4,0,1,1,53,1441,7.0,Yes,No,,,
+STU0118,IT,9.0,2,64.2,No,,,No,C++,none,mysql,AWS,Cursor,5,0,0,1,172,1550,5.3,Yes,Yes,Service,Systems Engineer,5.24
+STU0119,AI&DS,7.12,0,82.1,No,,,No,JavaScript,React,MongoDB,AWS,Claude Code,4,1,1,0,-,1528,8.3,No,Yes,Product,Backend Engineer,22.5
+STU0120,EEE,7.4,0,67.4,No,,,No,C++,None,PostgreSQL,None,ChatGPT,3,2,1,0,178,1231,3.8,Yes,Yes,Product,Full Stack Developer,20.87
+STU0121,IT,6.92,0,47.2,No,,,No,Java,React,PostgreSQL,Azure,GitHub Copilot,5,1,0,1,127,1468,N/A,Yes,No,,,
+STU0122,CSE,6.92,0,49.3,No,,,FALSE,C++,Next.js,mongodb,AWS,ChatGPT,3,2,?,1,329,N/A,4.6,Yes,Yes,Product,Full Stack Developer,14.72
+STU0123,IT,7.17,2,67.4,No,,,No,JavaScript,Node.js,MongoDB,None,Claude Code,5,0,0,0,108,1435,8.4,Yes,No,,,
+STU0124,EEE,8.4,2,52.3,No,,,No,Python,Node.js,MySQL,None,GitHub Copilot,4,1,1,2,0,0,4.8,Yes,No,,,
+STU0125,ME,8.38,0,57.2,No,,,No,C++,Node.js,MySQL,AWS,GitHub Copilot,6,0,2,0,139,1414,4.3,No,No,,,
+STU0126,AI&DS,6.09,0,NA,No,,,No,Go,Spring Boot,MySQL,None,GitHub Copilot,0,0,1,1,270,1554,7.0,Yes,Yes,Service,Analyst,2.5
+  STU0127,ECE,7.36,0,66.7,No,,,No,Java,Spring Boot,mongodb,AWS,None,2,1,2,1,157,1581,6.9,Yes,Yes,Product,SDE,12.75
+STU0128,CSE,7.3,0,61.4,No,,,No,TypeScript,None,PostgreSQL,Azure,None,5,0,0,2,5000,1668,6.4,Yes,Yes, Product ,SDE,17.85
+STU0129,CSE,8.23,0,73.8,NO,,,No,java,Next.js,MySQL,AWS,GitHub Copilot,4,0,1,0,0,0,100,No,Yes,Core/Other,Test Engineer,4.97
+STU0130,ECE,8.47,0,63.6,Yes,48.68,643,1,Python,Django,PostgreSQL,Google Cloud,ChatGPT,3,2,1,3,0,0,7.9,Yes,Yes,Service,Associate Engineer,TBD
+STU0131,CSE,7.5,3,60.8,Yes,33.62,2166,Yes,C++,None,None,aws,ChatGPT,7,0,1,2,253,1626,5.5,Yes,Yes,Service,Analyst,3.7
+STU0132,CSE,6.98,1,79.3,No,,,No,Python,None,MySQL,None,Chat GPT,4,0,2,2,9,0,9.8,Yes,Yes,Startup,Frontend Engineer,7.91
+STU0133,CSE,7.12,0,43.8,No,,,0,Python,ASP.NET Core,MySQL,None,ChatGPT,0,0,0,2,144,1151,10,No,No,,,
+STU0134,CSE,9.14,0,79.1,Yes,42.45,1307,Yes,PYTHON,Django,postgres,None,GitHub Copilot,-,2,1,0,244,1555,6.5,Yes,Yes,Startup,Frontend Engineer,10.64
+STU0135,IT,9.26,0,68.8,No,,,No,Java,Node.js,MySQL,AWS,ChatGPT,3,3,0,2,184,1671,6.7,Yes,Yes,Product,Full Stack Developer,18.64
+STU0136,CSE,7.74,0,85.6,Yes,22.48,4350,No,JavaScript,Spring Boot,PostgreSQL,Azure,Claude Code,1,1,2,2,187,1412,null,Yes,Yes,Product,Backend Engineer,18.24
+STU0137,ai&ds,8.55,2,75.0,Yes,32.75,2354,Yes,typescript,Django,postgresql,Azure,ChatGPT,5,2,1,3,154,1479,5.8,Yes,No,,,
+STU0138,CSE,6.87,0,52.1,No,,,No,Python,React,MongoDB,AWS,Claude Code,1,1,0,0,201,1600,7.1,Yes,No,Product,,
+STU0139,IT,8.39,0,79.9,Yes,27.18,3814,Yes,TypeScript,React,PostgreSQL,None,ChatGPT,1,1,0,0,191,1557,7.4,No,No,,,
+STU0140,CSE,6.28,2,40.8,No,,,No,Java,Spring Boot,MySQL,Google Cloud,cursor,3,0,1,1,242,1485,6.9,Yes,Yes,Product,SDE,22.14
+STU0141,CSE,6.44,0,56.0,No,,,No,Python,Node.js,MongoDB,None,Claude Code,4,0,0,0,339,1820,8.0,N,Yes,Product,Backend Engineer,250
+STU0142,AI&DS,7.61,0,77.1,No,,,No,JavaScript,Node.js,MongoDB,Azure,Claude Code,3,2,0,4,139,1286,5.2,Yes,Yes,Service,Systems Engineer,3.85
+STU0143,CE,7.9,0,49.2,No,,,No,Python,None,PostgreSQL,Amazon Web Services,GitHub Copilot,5,0,2,0,90,1461,10,Yes,Yes,Service,Associate Engineer,₹5.02L
+STU0144,CSE,11.2,1,80.4,No,,,No,Python,None,MongoDB,AWS,Claude Code,3,1,2,3,90,1657,5.5,No,No,,,
+STU0145,CSE,8.17,0,52.6,TRUE,42.16,1150,Yes,C++,None,None,None,GitHub Copilot,2,4,1,1,282,1641,6.3,No,Yes,Service,Associate Engineer,4.54
+STU0146,CSE,7.43,1,62.4,Yes,9.42,23260,No,Python,Node.js,PostgreSQL,Azure,GitHub Copilot,2,1,0,0,233,1753,7.0,No,N,,,
+STU0147,IT,7.28,0,39.9,No,,,No,Python,None,postgres,None,GitHub Copilot,3,1,0,2,42,1238,7.0,No,No,,,
+STU0148,AI&DS,7.99,1,49.9,Yes,32.04,2900,Yes,JavaScript,Django,SQLite,AWS,GitHub Copilot,4,2,1,3,200,1571,7.1,No,Yes,Core/Other,Graduate Engineer Trainee,2.82
+STU0149,CSE,8.0,0,73.7,YES,21.6,8044,No,Java,Node.js,None,Azure,ChatGPT,5,0,1,1,195,1669,7.3,Yes,No,,,
+STU0150,CSE,6.92,0,40.7,No,,,No,C#,React,MySQL,AWS,GitHub Copilot,2,2,0,2,239,350,7.0,No,NO,,,
+STU0151,IT,7.93,0,null,Yes,42.48,1174,Yes,C#,None,None,AWS,ChatGPT,5,0,0,0,136,1664,3.8,Yes,0,,,
+STU0152,CSE,7.55,0,70.8,Yes,22.08,5847,No,Python,Django,MySQL,AWS,Cursor,2,1,2,2,294,1564,6.5,No,Yes,Service,Associate Engineer,4.4
+STU0153,ME,5.62,0,54.3,No,,,No,Python,None,MongoDB,AWS,GitHub Copilot,7,1,0,2,41,1459,7.3,Yes,Yes,Product,SDE,16.69
+STU0154,AI&DS,-,1,73.0,No,,,No,C++,React,MongoDB,None,GitHub Copilot,3,3,3,0,146,1396,7.8,No,Yes,Product,  Backend Engineer ,23.97
+STU0155,ECE,8.14,0,79.5,No,,,No,Java,Spring Boot,MySQL,AWS,ChatGPT,2,0,0,1,15,0,5.5,Yes,YES,Product,SDE,16.35
+STU0156,IT,7.9/10,0,28.8,No,,,No,C++,React,PostgreSQL,AWS,claude code,6,1,1,1,?,1423,8.4,No,No,,,
+STU0157,ECE,8.73,0,NA,Yes,49.45,734,YES,JavaScript,React,MongoDB,AWS,GitHub Copilot,2,2,3,1,60,1586,5.5,no,Yes,Service,Systems Engineer,5.91
+STU0149,CSE,8.0,0,73.7,YES,21.6,8044,No,Java,Node.js,None,Azure,ChatGPT,5,0,1,1,195,1669,7.3,Yes,No,,,
+STU0158,CSE,7.76,0,67.9,No,,,No,Python,Next.js,MySQL,AWS,chatgpt,3,0,2,2,132,1437,5.6,Yes,No,,,
+STU0159,CSE,8.65,1,51.4,Yes,47.37,697,Yes,Java,Node.js,MongoDB,Google Cloud,ChatGPT,3,0,0,1,296,1793,5.3,Yes,No,,,
+STU0160,IT,5.5,1,?,No,,,No,C++,Node.js,Redis,AWS,GitHub Copilot,4,0,1,0,58,1439,5.4,Yes,No,,,
+ STU0161 ,IT,6.31,2,49.1,No,,,No,Python,Django,postgresql,Azure,GitHub Copilot,3,0,2,0,136,1577,4.9,Yes,No,,,
+STU0162,ECE,7.05,0,47.8,0,,,No,C++,Spring Boot,None,AWS,Cursor,3,1,0,2,170,1631,6.6,Yes,Yes,Startup,Full Stack Developer,4.11
+STU0163,AI&DS,8.11,1,69.9,No,,,No,Python,Django,PostgreSQL,None,None,4,6,1,2,266,1521,5.0,Yes,Yes,Service,  Systems Engineer,5.59
+STU0164,IT,7.23,0,60.6,No,,,No,JAVA,React,None,None,Cursor,4,1,2,2,81,1262,7.8,Yes,Yes,Service,Associate Engineer,4.72
+STU0151,IT,7.93,0,null,Yes,42.48,1174,Yes,C#,None,None,AWS,ChatGPT,5,0,0,0,136,1664,3.8,Yes,0,,,
+STU0165,CSE,7.02,0,52.7,Y,33.71,2161,Yes,JavaScript,React,MongoDB,Google Cloud,ChatGPT,3,1,1,0,202,1423,5.7,No,No,,,
+STU0166,ECE,7.82,0,68.8,No,,,No,JavaScript,React,MySQL,AWS,cursor,4,0,0,0,0,0,7.1,No,No,Service,,
+STU0167,AI&DS,8.28,0,67.4,No,,,0,Java,Spring Boot,SQLite,None,Cursor,4,1,0,0,147,1588,6.3,Yes,Yes,Service,Systems Engineer,TBD
+STU0168,Cse,6.32,0,37.6,Yes,25.95,3927,Yes,Java,Spring Boot,SQLite,AWS,Claude Code,3,0,1,1,334,1803,5.4,Yes,No,,,
+STU0169,CE,7.17,0,64.5,No,,,No,py,Node.js,MongoDB,Azure,GitHub Copilot,0,0,0,0,103,1491,6.8,No,No,,,
+STU0170,CSE,9.38,3,80.4,Yes,48.36,588,Yes,Java,Node.js,PostgreSQL,Azure,None,4,0,0,0,153,1602,6.6,n,No,,,
+STU0171,CSE,7.16,0,76.7,No,,,No,JAVA,Node.js,N/A,AWS,Claude Code,7,2,0,4,190,1560,6.5,Yes,Yes,Service,Associate Engineer,6.44
+STU0172,CSE,9.28,0,59.8,Yes,38.93,1689,Yes,JavaScript,None,SQLite,None,GitHub Copilot,3,0,1,1,275,1726,5.9,Yes,Yes,PSU,Engineer Trainee,12.03
+STU0173,it,6.41,0,47.2,No,,,NO,JAVA,Node.js,MySQL,None,None,4,0,2,1,212,1588,8.2,Y,No,,,
+STU0174,Mechanical,8.87,0,79.0,Yes,29.73,2622,Yes,Python,None,PostgreSQL,None,None,3,1,0,0,75,1604,,Yes,No,,,
+STU0175,CE,8.29,0,82.9,Yes,43.67,1071,Yes,C++,None,SQLite,AWS,Cursor,3,0,1,4,77,1352,6.9,TRUE,yes,PSU, Management Trainee (Technical),17.74
+STU0176,ME,7.62,0,90.2,Yes,27.55,3518,YES,Python,None,PostgreSQL,Azure,Cursor,1,0,3,0,172,null,6.0,No,Yes,Service,Systems Engineer,3.3
+STU0177,Cse,7.92,3,73.1,Yes,45.28,1016,Yes,C++,React,Redis,None,GitHub Copilot,2,0,2,3,250,1825,5.3,No,No,,,
+STU0178,IT,7.76,0,48.2,No,,,No,py,node,None,Google Cloud,ChatGPT,3,0,null,0,17,0,3.8,1,No,,,
+STU0179,AI&DS,7.45,0,60.6,No,,,No,Java,Spring Boot,MongoDB,GCP,Claude Code,2,1,1,1,58,1267,4.7,No,No,,,
+STU0180,ECE,7.04,0,66.3,No,32,,No,JavaScript,nodejs,None,AWS,ChatGPT,0,0,0,1,71,1341,5.3,No,No,,,
+STU0181,CSE,7.66,0,70.2,No,,,No,Javascript,None,MySQL,None,GitHub Copilot,3,0,1,0,55,1591,9.9,No,No,,,7.92
+STU0182,CE,8.2,1,70.7,Yes,23.56,4615,No,JavaScript,Next.js,PostgreSQL,AWS,ChatGPT,5,0,0,0,119,1504,6.0,Yes,No,,,
+STU0183,CSE,8.23,0,50.1,Yes,32.53,1850,Yes,JavaScript,Node.js,PostgreSQL,None,GitHub Copilot,3,0,0,2,264,1298,7.9,Yes,No,,,
+STU0184,CSE,8.13,0,49.5,No,,,no,C ++,React,MongoDB,Azure,chatgpt,2,2,0,2,NA,1430,7.9,Yes,Yes,,Systems Engineer,5.46
+STU0185,I.T.,7.31,0,?,No,,,No,C++,Spring Boot,PostgreSQL,AWS,None,2,0,2,4,422,1886,6.9,No,Yes,Service,Associate Engineer,5.1
+STU0186,AIDS,6.21,3,59.6,Yes,31.46,3036,Yes,JavaScript,Django,MongoDB,Google Cloud,ChatGPT,6,2,3,2,62,1318,7.2,Yes,No,,,
+STU0187, CSE,6.65,1,49.5,No,20,,No,Go,None,MongoDB,Google Cloud,Claude Code,5,0,0,1,5,0,5.8,No,No,,,
+STU0188,CSE,7.04,0,74.3,No,,,No,JavaScript,None,SQLite,AWS,GitHub Copilot,5,1,0,1,108,1292,6.0,Yes,1,Product,Full Stack Developer,15.79
+STU0074,it,8.16,0,64.2,Yes,52.33,486,Yes,JAVASCRIPT,React,MySQL,AWS,Claude Code,5,0,1,1,217,9999,7.4,FALSE,No,,,
+STU0189,EEE,7.87,0,42.9,No,,,FALSE,Python,Django,MongoDB,AWS,None,3,0,2,2,0,0,6.1,Yes,Yes,Product,Backend Engineer,17.9
+STU0190,ECE,7.7,1,56.6,No,,,No,Python,Django,PostgreSQL,AWS,Cursor,2,2,1,0,13,0,8.7,yes,No,,,
+STU0191,CSE,6.95,0,61.6,Yes,15.84,12499,No,JavaScript,React,PostgreSQL,Azure,None,2,0,2,1,392,1666,7.2,Yes,Yes,Product,Full Stack Developer,19.47
+STU0192,CSE,8.16,1,69.0,Yes,14.05,11025,No,typescript,Node.js,PostgreSQL,AWS,Cursor,4,0,3,3,282,1577,8.2,No,Yes,Service,Systems Engineer,5.07
+STU0193,CSE,7.83,0,49.0,No,,,No,Go,Django,MySQL,Google Cloud,GitHub Copilot,3,1,1,0,243,1487,3.8,Yes,No,,,
+STU0194,IT,9.21,0,67.5,No,,,No,Python,ReactJS,MySQL,NA,ChatGPT,4,2,1,1,174,1650,6.5,Yes,Yes,Product,Full Stack Developer,14.64
+STU0195,IT,,0,64.3,Yes,18.79,10411,No,C++,React,MongoDB,None,cursor,3,0,0,1,69,1464,6.6,No,No,,,
+STU0196,CSE,8.07,0,61.1,no,,,No,Python,ASP.NET Core,PostgreSQL,None,Claude Code,2,1,NA,1,89,1643,6.8,no,No,,,
+STU0197,IT,8.38,0,50.9,Yes,28.41,3956,Yes,java,React,MySQL,None,ChatGPT,2,0,1,1,123,1274,5.7,Yes,No,,,
+STU0198,ECE,-7.5,0,72.4,Yes,47.92,597,Yes,Java,Spring Boot,None,AWS,ChatGPT,4,1,1,4,149,1295,7.3,Yes,Yes,Service,Analyst,5.59
+STU0199,I.T.,8.73,0,55.6,No,,,No,JavaScript,React,MongoDB,none,None,4,1,1,0,302,1598,-,Yes,TRUE,Startup,Frontend Engineer,6.8
+STU0111,cse,8.26,0,44.1,1,19.82,6054,No,PYTHON,Django,PostgreSQL,Azure,GitHub Copilot,5,0,2,3,202,1379,4.9,No,Yes,Service,Associate Engineer,3.75
+STU0200,Ece,7.65,0,64.9,No,,,No,C#,None,PostgreSQL,Google Cloud,None,2,1,0,0,0,0,5.4,Yes,No,,,
