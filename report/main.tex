@@ -1,0 +1,534 @@
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\graphicspath{{./images/}{./}}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\Urlmuskip=0mu plus 1mu\relax
+\sloppy
+
+\definecolor{accent}{HTML}{1F3A8A}
+\setstretch{1.15}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\captionsetup{font=small,labelfont=bf}
+
+% ---------- Header / footer (not on the title page) ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Fundamentals of Data Science}
+\fancyhead[R]{\small Student Academic Profile}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% =====================================================
+%                      TITLE PAGE
+% =====================================================
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+
+% Optional: add your university logo (upload logo.png to Overleaf, then uncomment)
+% \includegraphics[width=0.3\textwidth]{logo.png}\\[1.2cm]
+
+\vspace*{1.5cm}
+
+{\Large\bfseries\color{accent} FUNDAMENTALS OF DATA SCIENCE}\\[0.6cm]
+{\large Semester Project Report}
+
+\vspace{1.5cm}
+
+\rule{\textwidth}{1.2pt}\\[0.5cm]
+{\large Topic}\\[0.2cm]
+{\Huge\bfseries Student Academic Profile}\\[0.3cm]
+{\large Campus Placement Analysis using Python}\\[0.5cm]
+\rule{\textwidth}{1.2pt}
+
+\vfill
+
+\begin{minipage}[t]{0.47\textwidth}
+\raggedright
+{\large\bfseries Submitted by}\\[0.3cm]
+Aanya \hfill (590026676)\\[0.15cm]
+Gaurangi \hfill (590026692)\\[0.4cm]
+{\bfseries Batch:} 01
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+\raggedleft
+{\large\bfseries Submitted to}\\[0.3cm]
+Mr.\ Virender Kadayan Sir
+\end{minipage}
+
+\vspace{2cm}
+\end{titlepage}
+
+% =====================================================
+%                  FRONT MATTER
+% =====================================================
+\pagenumbering{roman}
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+This project studies how academic performance, aptitude and technical skills relate to campus placement outcomes. Using Python (Pandas, NumPy, Matplotlib, Seaborn and Scikit-learn), we inspect and clean a deliberately messy mock dataset of 212 raw records and 26 attributes (200 unique students), compute descriptive statistics and probabilities, visualise placement patterns, measure covariance and correlation, perform a Welch's t-test and a chi-square test of independence, and fit a logistic regression and a simple linear regression model. About 52\% of students in the dataset are placed. Placed students have a significantly higher average CGPA than not-placed students ($p=0.0157$), whereas branch is not significantly associated with placement ($p=0.726$). CGPA alone is a weak predictor of placement (test accuracy 55.3\%) and explains almost none of the variation in package among placed students ($R^2 = 0.6\%$). All findings apply only to this mock dataset.
+
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+% =====================================================
+%                     1. INTRODUCTION
+% =====================================================
+\section{Introduction}
+Campus placement outcomes can be associated with several student attributes, such as academic performance, aptitude scores, projects, internships and communication skills. This project uses a student placement dataset to practise the basic stages of a data science workflow: loading data, checking its quality, cleaning it, summarising it, visualising it, and testing simple statistical hypotheses and models.
+
+\subsection{Problem Statement}
+To examine the structure and quality of a campus placement dataset, summarise important student attributes, visualise placement patterns, test which factors are associated with placement, and study the relationship between CGPA and salary package.
+
+\subsection{Objectives}
+\begin{itemize}[noitemsep]
+  \item Load and inspect a CSV dataset.
+  \item Identify missing values, duplicate records and inconsistent entries.
+  \item Clean selected columns using basic Pandas operations.
+  \item Calculate descriptive statistics and simple probabilities.
+  \item Compare placement outcomes across branches.
+  \item Create visualisations to communicate patterns.
+  \item Calculate covariance and correlation.
+  \item Apply an independent-samples (Welch's) t-test to compare CGPA between placed and not-placed students.
+  \item Apply a chi-square test of independence between branch and placement status.
+  \item Apply logistic regression to classify placement status from CGPA.
+  \item Fit a simple linear regression of package on CGPA.
+\end{itemize}
+
+\subsection{Scope}
+The project is intentionally limited to beginner-level Fundamentals of Data Science concepts. It uses two basic hypothesis tests, one binary classifier (logistic regression) and simple linear regression. It does not use clustering, multiple regression or advanced machine-learning algorithms.
+
+% =====================================================
+%                     2. DATASET
+% =====================================================
+\section{Dataset Description}
+\subsection{Source and Nature of the Data}
+The dataset used in this project, \texttt{mock\_placement\_raw.csv}, is a \textbf{mock (synthetic) dataset} inspired by the \emph{Student Placement Prediction and Career Readiness Dataset for Personalized Career Guidance} published on IEEE DataPort:\\
+\url{https://ieee-dataport.org/documents/student-placement-prediction-and-career-readiness-dataset-personalized-career-guidance}
+
+It contains no real student records. It is deliberately ``messy'' (duplicate IDs, mixed formats, placeholders and impossible values) so that the cleaning steps can be practised.
+
+\subsection{Size of the Dataset}
+The raw file has \textbf{212 rows and 26 columns}, covering \textbf{200 unique students} (12 Student IDs are repeated).
+
+\subsection{Attributes}
+The 26 attributes fall into the following groups.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{3.3cm}p{5.2cm}p{6.2cm}@{}}
+\toprule
+\textbf{Group} & \textbf{Columns} & \textbf{Meaning} \\
+\midrule
+Identity & \texttt{Student ID}, \texttt{branch} & Unique ID and engineering branch (CSE, IT, ECE, AI\&DS, EEE, ME, CE) \\
+Academics & \texttt{CGPA}, \texttt{active\_backlogs}, \texttt{aptitude\_score} & Grade point average (out of 10), current backlogs, aptitude test score (out of 100) \\
+GATE & \texttt{gate\_appeared}, \texttt{GATE Score}, \texttt{gate\_rank}, \texttt{gate\_qualified} & Whether the student appeared in and qualified GATE, with score and rank \\
+Tech stack & \texttt{primary\_language}, \texttt{web\_framework}, \texttt{database}, \texttt{cloud\_platform}, \texttt{ai\_coding\_tool} & Main language, framework, database, cloud platform and AI assistant used \\
+Experience & \texttt{num\_projects}, \texttt{ai\_ml\_projects}, \texttt{internships}, \texttt{certifications} & Projects, AI/ML projects, internships and certifications \\
+Skills & \texttt{dsa\_problems\_solved}, \texttt{leetcode\_rating}, \texttt{communication\_score}, \texttt{active\_github} & Coding practice, contest rating, communication (out of 10), GitHub activity \\
+Outcome & \texttt{placed}, \texttt{company\_type}, \texttt{role}, \texttt{Package (LPA)} & Placement status (target), type of company, job role and package in lakhs per annum \\
+\bottomrule
+\end{tabular}
+\caption{Groups of attributes in the dataset.}
+\end{table}
+
+\subsection{Data Quality Problems in the Raw File}
+Profiling of the raw file showed the following issues:
+\begin{itemize}[noitemsep]
+  \item 12 repeated Student IDs and several IDs with extra spaces.
+  \item 28 different spellings for only 7 branches; similar spelling variants for languages, frameworks, databases, cloud platforms and AI tools.
+  \item Yes/No columns written in many forms (e.g.\ \texttt{Y}, \texttt{yes}, \texttt{TRUE}, \texttt{1}).
+  \item Numeric columns stored as text, including entries such as \texttt{8.0/10}, \texttt{69.0\%}, \texttt{NA}, \texttt{?}, \texttt{null} and \texttt{TBD}.
+  \item Impossible values, for example negative CGPA, aptitude scores above 100 and extremely large package values.
+  \item Empty GATE and package fields for students who did not appear in GATE or were not placed.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{images/missing_and_branch_labels.png}
+  \caption{Percentage of missing values per column (left) and number of rows per raw branch label (right); the 28 spellings map to only 7 real branches.}
+  \label{fig:missing_and_branch_labels}
+\end{figure}
+
+
+% =====================================================
+%                     3. TOOLS
+% =====================================================
+\section{Tools and Libraries}
+\begin{itemize}[noitemsep]
+  \item \textbf{Python} -- programming language.
+  \item \textbf{Pandas} -- reading, inspecting and cleaning tabular data.
+  \item \textbf{NumPy} -- numerical calculations.
+  \item \textbf{Matplotlib} and \textbf{Seaborn} -- charts and statistical visualisations.
+  \item \textbf{Scikit-learn} -- training and evaluating the logistic regression model.
+\end{itemize}
+
+% =====================================================
+%                     4. METHODOLOGY
+% =====================================================
+\section{Methodology}
+\subsection{Data Loading}
+The CSV was read with \texttt{keep\_default\_na=False} so that the word \texttt{None} (meaning ``no tool used'') is kept as a real category; only truly empty cells are treated as missing. The header \texttt{CGPA } had a trailing space, which was removed.
+
+\subsection{Data Cleaning and Preprocessing}
+All cleaning was applied to a copy so the original file remains unchanged, in this fixed order:
+\begin{enumerate}[noitemsep]
+  \item Remove extra spaces from text values and Student IDs.
+  \item Convert placeholders (\texttt{?}, \texttt{NA}, \texttt{N/A}, \texttt{null}, \texttt{-}, \texttt{TBD}) to missing values.
+  \item Remove duplicate Student IDs, keeping the first record.
+  \item Standardise Yes/No columns.
+  \item Standardise branch labels and the spelling of languages, frameworks, databases, cloud platforms and AI tools.
+  \item Convert CGPA written as \texttt{8.0/10}, \texttt{69.0\%}, \texttt{7,86} or \texttt{85} into a number out of 10.
+  \item Treat impossible values (outside valid ranges) as missing.
+\end{enumerate}
+After cleaning, 200 unique students remain. A missing placement label is not treated as ``No''; only records with a known outcome are used for placement probabilities.
+
+\subsection{Statistical Methods}
+\begin{itemize}[noitemsep]
+  \item \textbf{Descriptive statistics}, calculated manually with loops and formulas:
+  \[
+  \bar{x}=\frac{\sum x_i}{n},\qquad s^2=\frac{\sum (x_i-\bar{x})^2}{n-1},\qquad s=\sqrt{s^2}.
+  \]
+  \item \textbf{Probability:} $P(\text{Placed})=\dfrac{\text{placed students}}{\text{all students}}$.
+  \item \textbf{Covariance and Pearson correlation:}
+  \[
+  \mathrm{Cov}(X,Y)=\frac{\sum (X_i-\bar X)(Y_i-\bar Y)}{n-1},\qquad r=\frac{\mathrm{Cov}(X,Y)}{s_X s_Y}.
+  \]
+  \item \textbf{Welch's t-test:}
+  \[
+  t=\frac{\bar X_1-\bar X_2}{\sqrt{\dfrac{s_1^2}{n_1}+\dfrac{s_2^2}{n_2}}}.
+  \]
+  \item \textbf{Chi-square test of independence:}
+  \[
+  E=\frac{\text{row total}\times\text{column total}}{\text{grand total}},\qquad \chi^2=\sum\frac{(O-E)^2}{E}.
+  \]
+  \item \textbf{Logistic regression:}
+  \[
+  P(Y=1)=\frac{1}{1+e^{-(b_0+b_1X)}}
+  \]
+  with $X$ = CGPA and $Y$ = placement (Placed $=1$, Not placed $=0$), using an 80/20 train--test split.
+  \item \textbf{Simple linear regression:} $\hat{Y}=b_0+b_1X$ with $X$ = CGPA and $Y$ = package (LPA), and
+  \[
+  R^2=1-\frac{\sum (Y-\hat Y)^2}{\sum (Y-\bar Y)^2}.
+  \]
+\end{itemize}
+
+% =====================================================
+%                     5. RESULTS
+% =====================================================
+\section{Results and Analysis}
+
+\subsection{Descriptive Statistics of CGPA}
+The following results use the 188 students with a valid CGPA.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\toprule
+\textbf{Measure} & \textbf{Value} \\
+\midrule
+Mean & 7.580 \\
+Median & 7.60 \\
+Mode & 5.50 \\
+Sample variance & 0.771 \\
+Standard deviation & 0.878 \\
+Minimum & 5.50 \\
+Maximum & 9.75 \\
+\bottomrule
+\end{tabular}
+\caption{Descriptive statistics of CGPA ($n=188$).}
+\end{table}
+
+The mean (7.58) and median (7.60) are almost equal, so the distribution is roughly symmetric. Half of the students lie between about 6.98 and 8.17, and a standard deviation near 0.88 shows that scores are fairly tightly grouped. The mode (5.50) is simply the lowest value, which repeats most often, and is not a typical CGPA.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/cgpa_histogram.png}
+  \caption{Histogram of student CGPA (ten equal-width classes).}
+  \label{fig:cgpa_histogram}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/cgpa_boxplot.png}
+  \caption{Boxplot of CGPA showing the median and quartiles.}
+  \label{fig:cgpa_boxplot}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{CGPA range} & 5.50--5.92 & 5.92--6.35 & 6.35--6.78 & 6.78--7.20 & 7.20--7.62 \\
+\textbf{Students} & 6 & 10 & 12 & 39 & 29 \\
+\midrule
+\textbf{CGPA range} & 7.62--8.05 & 8.05--8.47 & 8.47--8.90 & 8.90--9.32 & 9.32--9.75 \\
+\textbf{Students} & 33 & 32 & 14 & 9 & 4 \\
+\bottomrule
+\end{tabular}
+\caption{Frequency distribution of CGPA in ten equal-width classes.}
+\end{table}
+
+\subsection{Probability and Branch-wise Placement}
+Among the 200 unique students, 104 are placed, so
+\[
+P(\text{Placed})=\frac{104}{200}=0.52\;(52.0\%),\qquad P(\text{Not placed})=48.0\%.
+\]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{images/placement_distribution.png}
+  \caption{Placement status distribution (Yes = placed, No = not placed).}
+  \label{fig:placement_distribution}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Branch} & \textbf{Placed} & \textbf{Not placed} & \textbf{Placement rate} \\
+\midrule
+AI\&DS & 12 & 9  & 57.1\% \\
+CE     & 4  & 8  & 33.3\% \\
+CSE    & 44 & 36 & 55.0\% \\
+ECE    & 18 & 15 & 54.5\% \\
+EEE    & 4  & 2  & 66.7\% \\
+IT     & 16 & 20 & 44.4\% \\
+ME     & 6  & 6  & 50.0\% \\
+\midrule
+\textbf{Total} & \textbf{104} & \textbf{96} & \textbf{52.0\%} \\
+\bottomrule
+\end{tabular}
+\caption{Branch-wise placement frequency.}
+\end{table}
+
+EEE, AI\&DS and CSE show the highest placement rates, while CE and IT show the lowest. EEE and CE have very few students (6 and 12), so their percentages should be read with care.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{images/branch_placement.png}
+  \caption{Branch-wise placement counts.}
+  \label{fig:branch_placement}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/aptitude_by_placement.png}
+  \caption{Aptitude score distribution by placement status.}
+  \label{fig:aptitude_by_placement}
+\end{figure}
+
+\subsection{Covariance and Correlation}
+Pearson correlation was calculated for five numeric variables.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+ & \textbf{CGPA} & \textbf{Aptitude} & \textbf{Comm.} & \textbf{DSA} & \textbf{Package} \\
+\midrule
+\textbf{CGPA}       & 1.000 & 0.266 & $-0.055$ & 0.042 & $-0.079$ \\
+\textbf{Aptitude}   & 0.266 & 1.000 & 0.001 & $-0.038$ & 0.076 \\
+\textbf{Comm.}      & $-0.055$ & 0.001 & 1.000 & $-0.089$ & 0.091 \\
+\textbf{DSA}        & 0.042 & $-0.038$ & $-0.089$ & 1.000 & $-0.024$ \\
+\textbf{Package}    & $-0.079$ & 0.076 & 0.091 & $-0.024$ & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{Pearson correlation matrix (Comm.\ = communication score, DSA = DSA problems solved).}
+\end{table}
+
+The only noticeable relationship is a weak positive correlation between CGPA and aptitude score ($r=0.266$). All other pairs are very close to zero, so these variables move almost independently of each other. Correlation does not imply causation.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/correlation_heatmap.png}
+  \caption{Correlation heatmap of the five numeric variables.}
+  \label{fig:correlation_heatmap}
+\end{figure}
+
+
+\subsection{Welch's t-Test: CGPA and Placement Status}
+\textbf{Hypotheses.} $H_0$: the mean CGPA is equal for placed and not-placed students; $H_1$: the means differ. Significance level $\alpha=0.05$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+ & \textbf{Placed} & \textbf{Not placed} \\
+\midrule
+Number of students & 97 & 91 \\
+Mean CGPA & 7.729 & 7.421 \\
+\bottomrule
+\end{tabular}
+\caption{CGPA by placement status.}
+\end{table}
+
+The test gives $t=2.439$ with $\text{df}\approx185.96$ and $p=0.0157$. Since $|t|=2.439$ exceeds the critical value $1.98$ and $p<0.05$, we \textbf{reject $H_0$}: placed students have a significantly higher average CGPA (about 0.31 points) than not-placed students in this dataset.
+
+\subsection{Chi-Square Test: Branch and Placement Status}
+\textbf{Hypotheses.} $H_0$: branch and placement status are independent; $H_1$: they are associated. Significance level $\alpha=0.05$.
+
+The test gives $\chi^2=3.632$ with 6 degrees of freedom and $p=0.726$. The critical value at $\alpha=0.05$ is $12.592$, which is larger than the calculated $\chi^2$, so we \textbf{fail to reject $H_0$}: there is no significant association between branch and placement in this dataset. Two of the 14 cells have an expected count below 5 (minimum 2.88), so the result should be treated with some caution.
+
+\subsection{Logistic Regression: Predicting Placement from CGPA}
+After removing rows with missing CGPA or placement status, the data was split 80/20 into 150 training and 38 testing records. The fitted model is
+\[
+P(\text{Placed})=\frac{1}{1+e^{-(-2.592+0.349\,\text{CGPA})}}.
+\]
+Each additional CGPA point increases the log-odds of placement by about 0.349. The predicted probability reaches 0.5 at a CGPA of about \textbf{7.43}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/logistic_regression.png}
+  \caption{Logistic regression: predicted probability of placement against CGPA, with test outcomes.}
+  \label{fig:logistic_regression}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+ & \textbf{Predicted Not placed} & \textbf{Predicted Placed} \\
+\midrule
+\textbf{Actually Not placed} & 9 & 9 \\
+\textbf{Actually Placed}     & 8 & 12 \\
+\bottomrule
+\end{tabular}
+\caption{Confusion matrix on the 38 test records.}
+\end{table}
+
+The accuracy is
+\[
+\text{Accuracy}=\frac{9+12}{38}=0.553\;(55.3\%).
+\]
+This is only slightly better than guessing, which shows that CGPA alone is not a strong predictor of placement. Other factors (aptitude, projects, internships, communication) are not included in the model.
+
+\subsection{Simple Linear Regression: CGPA and Package}
+Package is available only for placed students, so this model uses $n=92$ placed students with a valid package. The fitted line is
+\[
+\widehat{\text{Package}}=13.996-0.548\times\text{CGPA}.
+\]
+The correlation is $r=-0.079$ and $R^2=0.0063$, i.e.\ CGPA explains only about \textbf{0.6\%} of the variation in package. The slope is slightly negative and practically zero. The model's estimate for CGPA $=8$ is about 9.61~LPA, but such a prediction is unreliable because the fit is extremely weak. In this dataset, package depends on other factors rather than on CGPA.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/linear_regression.png}
+  \caption{Scatter plot of CGPA vs package with the fitted regression line.}
+  \label{fig:linear_regression}
+\end{figure}
+
+
+\subsection{Package by Company Type}
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Company type} & \textbf{Placed students} & \textbf{Average package (LPA)} \\
+\midrule
+Product    & 29 & 17.27 \\
+PSU        & 9  & 14.40 \\
+Startup    & 17 & 8.11 \\
+Service    & 36 & 4.82 \\
+Core/Other & 5  & 3.36 \\
+\bottomrule
+\end{tabular}
+\caption{Average package by type of hiring company.}
+\end{table}
+
+Company type is a much stronger driver of salary than CGPA: Product companies pay the most on average (17.3 LPA), followed by PSUs (14.4 LPA), while Service and Core/Other companies pay the least.
+
+% =====================================================
+%                     6. KEY FINDINGS
+% =====================================================
+\section{Key Findings}
+\begin{enumerate}[noitemsep]
+  \item About \textbf{52\%} of the 200 students are placed.
+  \item The average CGPA is 7.58 with a standard deviation of 0.88, and the distribution is roughly symmetric.
+  \item Placed students have a \textbf{significantly higher CGPA} than not-placed students ($t=2.439$, $p=0.0157$).
+  \item \textbf{Branch is not significantly associated} with placement ($\chi^2=3.632$, $p=0.726$).
+  \item CGPA and aptitude score are weakly positively correlated ($r=0.266$); other pairs are almost uncorrelated.
+  \item A logistic regression using only CGPA reaches \textbf{55.3\%} test accuracy, so CGPA alone is a weak predictor of placement.
+  \item CGPA explains only \textbf{0.6\%} of the variation in package; the \textbf{type of company} matters far more.
+\end{enumerate}
+
+% =====================================================
+%                     7. LIMITATIONS
+% =====================================================
+\section{Limitations}
+\begin{itemize}[noitemsep]
+  \item The dataset is mock data and may not represent real placement conditions; findings must not be generalised to any real college or employer.
+  \item Some records contain missing or inconsistent values, even after cleaning.
+  \item Branch-wise results are affected by unequal branch sizes, and some chi-square cells have small expected counts.
+  \item Correlation does not establish causation.
+  \item Logistic regression uses only CGPA, and linear regression uses only one independent variable.
+  \item Package is known only for placed students, so the regression is restricted to that group.
+  \item The models must not be used for real student selection or salary decisions.
+\end{itemize}
+
+% =====================================================
+%                     8. CONCLUSION
+% =====================================================
+\section{Conclusion}
+This project demonstrated a complete beginner-level data science workflow in Python. A messy mock campus-placement dataset was inspected, cleaned and summarised; probabilities and frequency distributions were calculated; placement patterns were visualised; relationships were explored using covariance and correlation; two hypothesis tests were performed; and logistic and simple linear regression models were fitted. The analysis shows that CGPA differs significantly between placed and not-placed students, but that branch is not associated with placement, and that CGPA alone neither predicts placement well nor explains package. The type of hiring company has a much larger effect on salary. These results hold only within the limitations of the mock dataset.
+
+\subsection*{Concepts Demonstrated}
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{FDS concept} & \textbf{Report section} \\
+\midrule
+CSV data handling & 4.1 \\
+Data quality checks and cleaning & 2.4, 4.2 \\
+Descriptive statistics & 5.1 \\
+Basic probability and frequency distribution & 5.2 \\
+Covariance and correlation & 5.3 \\
+Independent-samples t-test & 5.4 \\
+Chi-square test of independence & 5.5 \\
+Logistic regression & 5.6 \\
+Simple linear regression & 5.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% =====================================================
+%                     REFERENCES
+% =====================================================
+\begin{thebibliography}{9}
+\bibitem{ieee} IEEE DataPort. \emph{Student Placement Prediction and Career Readiness Dataset for Personalized Career Guidance}. \url{https://ieee-dataport.org/documents/student-placement-prediction-and-career-readiness-dataset-personalized-career-guidance}
+\bibitem{pandas} The pandas development team. \emph{pandas documentation}. \url{https://pandas.pydata.org/docs/}
+\bibitem{numpy} NumPy Developers. \emph{NumPy documentation}. \url{https://numpy.org/doc/}
+\bibitem{sklearn} Scikit-learn developers. \emph{Scikit-learn: Machine Learning in Python}. \url{https://scikit-learn.org/stable/}
+\bibitem{mpl} Matplotlib development team. \emph{Matplotlib documentation}. \url{https://matplotlib.org/stable/}
+\bibitem{seaborn} M.\ Waskom. \emph{seaborn: statistical data visualization}. \url{https://seaborn.pydata.org/}
+\end{thebibliography}
+
+\end{document}
